@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--My colors-->
+    <color name="pewter_Blue">#8eacbb</color>
+    <color name="slate_Gray">#607d8b</color>
+    <color name="charcoal">#34515e</color>
+
+    <color name="champagne_Pink">#F1D5CB</color>
+    <color name="black_Shadows">#bcaaa4</color>
+    <color name="cinereous">#8c7b75</color>
+
+    <color name="brown_game">#efdcd5</color>
+    <!--<color name="brown_game">#F3CDA4</color>-->
+
+</resources>

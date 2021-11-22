@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="equipment"
+            type="earth.darkwhite.albiononlineplayerstats.data.api.model.Equipment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_4dp">
+
+        <ImageView
+            android:id="@+id/img_bag"
+            createImageUrl="@{equipment.bag}"
+            android:layout_width="@dimen/_56dp"
+            android:layout_height="@dimen/_56dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:contentDescription="@string/desc_bag_image"
+            android:scaleType="center"
+            android:src="@drawable/bag_rounded"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_head"
+            createImageUrl="@{equipment.head}"
+            android:layout_width="@dimen/_56dp"
+            android:layout_height="@dimen/_56dp"
+            android:contentDescription="@string/desc_helmet_image"
+            android:scaleType="center"
+            android:src="@drawable/helmet_rounded"
+            app:layout_constraintStart_toEndOf="@+id/img_bag"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_cape"
+            createImageUrl="@{equipment.cape}"
+            android:layout_width="@dimen/_56dp"
+            android:layout_height="@dimen/_56dp"
+            android:contentDescription="@string/desc_cape_image"
+            android:scaleType="center"
+            android:src="@drawable/cape_rounded"
+            app:layout_constraintBottom_toBottomOf="@+id/img_bag"
+            app:layout_constraintStart_toEndOf="@+id/img_head"
+            app:layout_constraintTop_toTopOf="@+id/img_bag" />
+
+        <ImageView
+            android:id="@+id/img_weaponL"
+            createImageUrl="@{equipment.mainHand}"
+            android:layout_width="@dimen/_56dp"
+            android:layout_height="@dimen/_56dp"
+            android:contentDescription="@string/desc_main_hand_image"
+            android:scaleType="center"
+            android:src="@drawable/weapon_l_rounded"
+            app:layout_constraintEnd_toEndOf="@+id/img_bag"
+            app:layout_constraintStart_toStartOf="@+id/img_bag"
+            app:layout_constraintTop_toBottomOf="@+id/img_bag" />
+
+        <ImageView
+            android:id="@+id/img_armor"
+            createImageUrl="@{equipment.armor}"
+            android:layout_width="@dimen/_56dp"
+            android:layout_height="@dimen/_56dp"
+            android:contentDescription="@string/desc_armor_image"
+            android:scaleType="center"
+            android:src="@drawable/armor_rounded"
+            app:layout_constraintEnd_toEndOf="@+id/img_head"
+            app:layout_constraintStart_toStartOf="@+id/img_head"
+            app:layout_constraintTop_toBottomOf="@+id/img_head" />
+
+        <ImageView
+            android:id="@+id/img_weaponR"
+            createImageUrlOffHand="@{equipment}"
+            android:layout_width="@dimen/_56dp"
+            android:layout_height="@dimen/_56dp"
+            android:contentDescription="@string/desc_offhand_image"
+            android:scaleType="center"
+            android:src="@drawable/weapon_r_rounded"
+            app:layout_constraintBottom_toBottomOf="@+id/img_weaponL"
+            app:layout_constraintStart_toEndOf="@+id/img_armor"
+            app:layout_constraintTop_toTopOf="@+id/img_weaponL" />
+
+        <ImageView
+            android:id="@+id/img_food"
+            createImageUrl="@{equipment.food}"
+            android:layout_width="@dimen/_56dp"
+            android:layout_height="@dimen/_56dp"
+            android:contentDescription="@string/desc_food_image"
+            android:scaleType="center"
+            android:src="@drawable/food_rounded"
+            app:layout_constraintEnd_toEndOf="@+id/img_weaponL"
+            app:layout_constraintStart_toStartOf="@+id/img_weaponL"
+            app:layout_constraintTop_toBottomOf="@+id/img_weaponL" />
+
+        <TextView
+            android:id="@+id/tv_food"
+            tvQuantityVisibility="@{equipment.food.count}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:layout_marginBottom="@dimen/_6dp"
+            android:text="@{String.valueOf(equipment.food.count)}"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/img_food"
+            app:layout_constraintEnd_toEndOf="@+id/img_food" />
+
+        <ImageView
+            android:id="@+id/img_shoes"
+            createImageUrl="@{equipment.shoes}"
+            android:layout_width="@dimen/_56dp"
+            android:layout_height="@dimen/_56dp"
+            android:contentDescription="@string/desc_shoes_image"
+            android:scaleType="center"
+            android:src="@drawable/shoes_rounded"
+            app:layout_constraintEnd_toEndOf="@+id/img_armor"
+            app:layout_constraintStart_toStartOf="@+id/img_armor"
+            app:layout_constraintTop_toBottomOf="@+id/img_armor" />
+
+        <ImageView
+            android:id="@+id/img_potion"
+            createImageUrl="@{equipment.potion}"
+            android:layout_width="@dimen/_56dp"
+            android:layout_height="@dimen/_56dp"
+            android:contentDescription="@string/desc_potion_image"
+            android:scaleType="center"
+            android:src="@drawable/potion_rounded"
+            app:layout_constraintEnd_toEndOf="@+id/img_weaponR"
+            app:layout_constraintStart_toStartOf="@+id/img_weaponR"
+            app:layout_constraintTop_toBottomOf="@+id/img_weaponR" />
+
+        <TextView
+            android:id="@+id/tv_potion"
+            tvQuantityVisibility="@{equipment.potion.count}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:layout_marginBottom="@dimen/_6dp"
+            android:text="@{String.valueOf(equipment.potion.count)}"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/img_potion"
+            app:layout_constraintEnd_toEndOf="@+id/img_potion" />
+
+        <ImageView
+            android:id="@+id/img_mount"
+            createImageUrl="@{equipment.mount}"
+            android:layout_width="@dimen/_56dp"
+            android:layout_height="@dimen/_56dp"
+            android:contentDescription="@string/desc_mount_image"
+            android:scaleType="center"
+            android:src="@drawable/mount_rounded"
+            app:layout_constraintEnd_toEndOf="@+id/img_shoes"
+            app:layout_constraintStart_toStartOf="@+id/img_shoes"
+            app:layout_constraintTop_toBottomOf="@+id/img_shoes" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,43 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.AlbionOnlinePlayerStats" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/pewter_Blue</item>
+        <item name="colorPrimaryVariant">@color/charcoal</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black_Shadows</item>
+        <item name="colorSecondaryVariant">@color/cinereous</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Customize your theme here. -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.MaterialComponents.Custom</item>
+        <item name="materialCardViewStyle">@style/Widget.MaterialComponents.CardView.Custom</item>
+        <item name="chipStyle">@style/Widget.MaterialComponents.Chip.Choice.Custom</item>
+        <!--Smooth animations when changing theme-->
+        <item name="android:windowAnimationStyle">@style/WindowAnimation</item>
+        <!--used in MainFragment-->
+        <item name="dropDownCustomColor">?android:attr/colorBackground</item>
+        <item name="mainLayoutCustomStrokeColor">@color/stroke_color</item>
+    </style>
+
+    <style name="WindowAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.CardView.Custom" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">@dimen/_2dp</item>
+        <item name="strokeColor">@color/stroke_color</item>
+        <item name="strokeWidth">@dimen/_1dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MaterialComponents.Custom</item>
+    </style>
+
+    <style name="ShapeAppearance.MaterialComponents.Custom">
+        <item name="cornerSize">@dimen/_8dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.Chip.Choice.Custom" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipCornerRadius">@dimen/_6dp</item>
+    </style>
+</resources>

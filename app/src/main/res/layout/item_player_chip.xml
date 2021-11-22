@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="player"
+            type="earth.darkwhite.albiononlineplayerstats.database.model.Player" />
+
+        <variable
+            name="listener"
+            type="earth.darkwhite.albiononlineplayerstats.mainscreen.DropDownAdapter.DropDownClickListener" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4dp"
+            android:layout_marginEnd="@dimen/_4dp"
+            android:checked="@{player.selected}"
+            android:onClick="@{(view) -> listener.onChipClick(view, player)}"
+            android:text="@{player.name}"
+            app:closeIcon="@drawable/ic_delete_24"
+            app:closeIconVisible="true" />
+
+        <FrameLayout
+            android:layout_width="@dimen/_32dp"
+            android:layout_height="@dimen/_45dp"
+            android:layout_gravity="end"
+            android:onClick="@{(view) -> listener.onDeleteClick(view, player)}" />
+    </FrameLayout>
+</layout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/drawable-v24/ic_error.xml" value="0.30277777777777776" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/drawable/ic_add_24.xml" value="0.38871794871794874" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/drawable/ic_anim_spin.xml" value="0.3277777777777778" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/drawable/ic_arrow_drop_down_circle_24.xml" value="0.30833333333333335" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/drawable/ic_arrow_drop_up_24.xml" value="0.3175925925925926" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/drawable/ic_clock.xml" value="0.3281385281385281" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/drawable/ic_drawing.xml" value="0.31296296296296294" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/drawable/ic_fame.xml" value="0.3281385281385281" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/drawable/ic_ip_address.xml" value="0.3281385281385281" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/drawable/ic_refresh.xml" value="0.3281385281385281" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/drawable/ic_search_24.xml" value="0.3281385281385281" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/drawable/ic_shield.xml" value="0.3281385281385281" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/drawable/ic_shield__1_.xml" value="0.3281385281385281" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/drawable/ic_skull.xml" value="0.34074074074074073" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/drawable/ic_sword.xml" value="0.34074074074074073" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/drawable/ic_test.xml" value="0.31296296296296294" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/drawable/ic_wax_seal.xml" value="0.32222222222222224" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/drawable/ic_wax_seal__1_.xml" value="0.32222222222222224" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/drawable/rounded_top_corners.xml" value="0.3281385281385281" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/layout/add_player_fragment.xml" value="0.2796296296296296" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/layout/detail_fragment.xml" value="0.22592592592592592" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/layout/drop_down_layout.xml" value="0.2796296296296296" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/layout/item_equipment.xml" value="0.3" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/layout/item_loot.xml" value="0.2722222222222222" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/layout/item_main_screen.xml" value="0.318859649122807" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/layout/item_min_data.xml" value="0.3037037037037037" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/layout/item_min_player.xml" value="0.37864583333333335" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/layout/item_name_guild.xml" value="0.2601851851851852" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/layout/item_player_chip.xml" value="0.318859649122807" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/layout/item_search_player.xml" value="0.25" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/layout/main_screen_fragment.xml" value="0.22407407407407406" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/layout/main_screen_placeholder.xml" value="0.2972222222222222" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/menu/menu.xml" value="0.2212962962962963" />
+        <entry key="..\:/Projects/AlbionOnlinePlayerStats/app/src/main/res/xml/root_preferences.xml" value="0.2851851851851852" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

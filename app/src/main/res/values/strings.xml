@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Albion Online Player Stats</string>
+    <string name="player_guild_name">Search Player Name…</string>
+    <string name="fab_desc">Add player to watch list</string>
+    <string name="transition_name">fab_to_add_player_fragment</string>
+    <string name="desc_img_sword_skull">Image representing kill or death of the tracked player</string>
+    <string name="desc_fame_image">Fame image</string>
+    <string name="desc_ip_image">Item power image</string>
+    <string name="desc_alliance_image">Alliance image</string>
+    <string name="detail_fragment_transition_name">Detail fragment transition name</string>
+    <string name="desc_time_image">Time image</string>
+    <string name="desc_versus_image">Versus image</string>
+    <string name="desc_loot_count_image">Loot count image</string>
+    <string name="error_parsing_date">Error parsing date</string>
+    <string name="used_in_verses">1</string>
+    <string name="empty">Empty</string>
+    <string name="desc_item_image">Item image</string>
+    <string name="equipment">Equipments</string>
+    <string name="reload">Reload</string>
+    <string name="filter">Filter</string>
+    <string name="settings">Settings</string>
+    <string name="desc_bag_image">Bag image</string>
+    <string name="desc_helmet_image">Helmet image</string>
+    <string name="desc_cape_image">Cape image</string>
+    <string name="desc_main_hand_image">MainHand image</string>
+    <string name="desc_armor_image">Armor image</string>
+    <string name="desc_offhand_image">OffHand image</string>
+    <string name="desc_food_image">Food image</string>
+    <string name="desc_shoes_image">Shoes image</string>
+    <string name="desc_potion_image">Potion image</string>
+    <string name="desc_mount_image">Mount image</string>
+    <string name="desc_loading_image">Loading image</string>
+    <string name="add_new_player">Add a new player to track</string>
+    <string name="desc_direction_image">Direction image</string>
+    <string name="no_kill_death_report_to_display">No Kill/Death report to display</string>
+    <string name="tracked_players">Tracked players</string>
+    <string name="reports_type">Reports type :</string>
+    <string name="deaths_kills">Deaths + Kills</string>
+    <string name="deaths">Deaths</string>
+    <string name="kills">Kills</string>
+    <string name="fame">Fame</string>
+    <string name="time">Time</string>
+    <string name="sort_by">Sort by :</string>
+    <string name="sort_order">Sort order :</string>
+    <string name="ascending">Ascending</string>
+    <string name="descending">Descending</string>
+    <string name="desc_range_slider_for_fame_points">Range slider for fame points</string>
+    <string name="arrow_image">Arrow image to elevate the view</string>
+    <string name="no_player_currently_tracked">No player currently tracked</string>
+    <string name="numb_reports_found">%1$d Reports found</string>
+    <string name="already_loading_data">Already loading data!</string>
+    <string name="fetch_user_data_failed">%1$d fetch requests failed, Please retry later</string>
+    <string name="image_representing_player_death_fame">Image representing player death fame</string>
+    <string name="image_representing_player_kill_death_fame_ratio">Image representing player kill / death fame ratio</string>
+    <string name="image_representing_player_kill_fame">Image representing player kill fame</string>
+    <string name="player_added_to_track_list">Player added to tracking list</string>
+    <string name="player_already_in_track_list">Player already exist in tracking list</string>
+    <string name="report_detail">Report Detail</string>
+    <string name="add_player">Add Player</string>
+
+    <!-- Preference Titles -->
+    <string name="app">App</string>
+    <string name="user_data">User Data</string>
+    <string name="about">About</string>
+
+    <!-- App Preferences -->
+    <string name="appearance">Appearance</string>
+    <string name="follow_device_theme">Follow device theme</string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="light_theme">Light theme</string>
+
+    <!-- User Data Preferences -->
+    <string name="send_crash_reports">Send crash reports</string>
+    <string name="send_crash_reports_desc">Help improve App usability by sending crash reports</string>
+    <string name="delete_user_data">Delete user data</string>
+    <string name="delete_used_data_desc">Delete all tracked players data from this device</string>
+
+    <!-- About Preferences -->
+    <string name="data_source">Data source</string>
+    <string name="data_source_desc">albiononline.com</string>
+    <string name="data_source_url">https://albiononline.com/en/killboard</string>
+    <string name="images_source">Images source</string>
+    <string name="images_source_desc">flaticon.com</string>
+    <string name="images_source_url">https://www.flaticon.com/</string>
+    <string name="app_source_code">App source code</string>
+    <string name="app_source_code_desc">Github repository</string>
+    <string name="github_url">https://github.com/darkwhite220/AlbionOnlinePlayerStats</string>
+    <string name="share_app">Share app</string>
+    <string name="share_app_desc">Rate, Feedback in Play Store is welcome</string>
+    <string name="play_store_url">https://play.google.com/store/apps/details?id=earth.darkwhite.albiononlineplayerstats</string>
+
+</resources>

@@ -1,0 +1,74 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/app">
+
+        <ListPreference
+            app:defaultValue="follow_device_theme"
+            app:entries="@array/theme_entries"
+            app:entryValues="@array/theme_values"
+            app:key="app_theme"
+            app:summary="@string/follow_device_theme"
+            app:title="@string/appearance" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/user_data">
+
+        <SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:key="crash_report"
+            app:summary="@string/send_crash_reports_desc"
+            app:title="@string/send_crash_reports" />
+
+        <Preference
+            app:key="delete_user_data"
+            app:summary="@string/delete_used_data_desc"
+            app:title="@string/delete_user_data" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/about">
+
+        <Preference
+            app:summary="@string/data_source_desc"
+            app:title="@string/data_source">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/data_source_url" />
+        </Preference>
+
+        <Preference
+            app:summary="@string/images_source_desc"
+            app:title="@string/images_source">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/images_source_url" />
+        </Preference>
+
+        <Preference
+            app:summary="@string/app_source_code_desc"
+            app:title="@string/app_source_code">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/github_url" />
+        </Preference>
+
+        <Preference
+            app:summary="@string/share_app_desc"
+            app:title="@string/share_app">
+            <intent
+                android:action="android.intent.action.SEND"
+                android:mimeType="text/plain">
+                <extra
+                    android:name="android.intent.extra.SUBJECT"
+                    android:value="@string/app_name" />
+                <extra
+                    android:name="android.intent.extra.TEXT"
+                    android:value="@string/play_store_url" />
+            </intent>
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

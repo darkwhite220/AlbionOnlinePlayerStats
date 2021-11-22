@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="pvpData"
+            type="earth.darkwhite.albiononlineplayerstats.data.api.model.ReportsResponse" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_4dp">
+
+        <TextView
+            android:id="@+id/tv_username_left"
+            userNameLeft="@{pvpData.theKiller}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{pvpData.victimData.name}"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_alliance_left"
+            app:layout_constraintEnd_toStartOf="@+id/img_kill_death"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_kill_death"
+            imageKillDeath="@{pvpData.theKiller}"
+            android:layout_width="@dimen/_16dp"
+            android:layout_height="@dimen/_16dp"
+            android:layout_margin="@dimen/_4dp"
+            android:contentDescription="@string/desc_img_sword_skull"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_username_left"
+            app:layout_constraintEnd_toStartOf="@+id/tv_username_right"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_username_left"
+            app:layout_constraintTop_toTopOf="@+id/tv_username_left" />
+
+        <TextView
+            android:id="@+id/tv_username_right"
+            userNameRight="@{pvpData.theKiller}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4dp"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            android:text="@{pvpData.killerData.name}"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_username_left"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/img_kill_death"
+            app:layout_constraintTop_toTopOf="@+id/tv_username_left" />
+
+        <!--Alliance-->
+        <ImageView
+            android:id="@+id/img_alliance_left"
+            android:layout_width="@dimen/_16dp"
+            android:layout_height="@dimen/_16dp"
+            android:layout_margin="@dimen/_4dp"
+            android:contentDescription="@string/desc_alliance_image"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_alliance_left"
+            app:layout_constraintEnd_toStartOf="@+id/tv_alliance_left"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_alliance_left"
+            app:srcCompat="@drawable/ic_shield__1_" />
+
+        <TextView
+            android:id="@+id/tv_alliance_left"
+            allianceNameLeft="@{pvpData}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toTopOf="@+id/tv_user_ip_left"
+            app:layout_constraintEnd_toStartOf="@+id/tv_alliance_right"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/img_alliance_left"
+            app:layout_constraintTop_toBottomOf="@+id/tv_username_left" />
+
+        <TextView
+            android:id="@+id/tv_alliance_right"
+            allianceNameRight="@{pvpData}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4dp"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_alliance_left"
+            app:layout_constraintEnd_toStartOf="@+id/img_alliance_right"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_alliance_left"
+            app:layout_constraintTop_toTopOf="@+id/tv_alliance_left" />
+
+        <ImageView
+            android:id="@+id/img_alliance_right"
+            android:layout_width="@dimen/_16dp"
+            android:layout_height="@dimen/_16dp"
+            android:layout_margin="@dimen/_4dp"
+            android:contentDescription="@string/desc_alliance_image"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_alliance_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_alliance_right"
+            app:layout_constraintTop_toTopOf="@+id/tv_alliance_right"
+            app:srcCompat="@drawable/ic_shield" />
+
+        <!--IP & FAME-->
+        <ImageView
+            android:id="@+id/img_user_ip_left"
+            android:layout_width="@dimen/_16dp"
+            android:layout_height="@dimen/_16dp"
+            android:layout_margin="@dimen/_4dp"
+            android:contentDescription="@string/desc_ip_image"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_user_ip_left"
+            app:layout_constraintEnd_toStartOf="@+id/tv_user_ip_left"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_user_ip_left"
+            app:srcCompat="@drawable/ic_ip_address" />
+
+        <TextView
+            android:id="@+id/tv_user_ip_left"
+            itemPower="@{pvpData.victimData.avgIP}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toTopOf="@id/tv_time"
+            app:layout_constraintEnd_toStartOf="@+id/img_fame"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/img_user_ip_left"
+            app:layout_constraintTop_toBottomOf="@+id/tv_alliance_left" />
+
+        <ImageView
+            android:id="@+id/img_fame"
+            android:layout_width="@dimen/_16dp"
+            android:layout_height="@dimen/_16dp"
+            android:layout_margin="@dimen/_4dp"
+            android:contentDescription="@string/desc_fame_image"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_user_ip_left"
+            app:layout_constraintEnd_toStartOf="@+id/tv_fame"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_user_ip_left"
+            app:layout_constraintTop_toTopOf="@+id/tv_user_ip_left"
+            app:srcCompat="@drawable/ic_wax_seal__1_" />
+
+        <TextView
+            android:id="@+id/tv_fame"
+            fame="@{pvpData.fame}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@+id/img_fame"
+            app:layout_constraintEnd_toStartOf="@+id/tv_user_ip_right"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/img_fame"
+            app:layout_constraintTop_toTopOf="@+id/img_fame" />
+
+        <TextView
+            android:id="@+id/tv_user_ip_right"
+            itemPower="@{pvpData.killerData.avgIP}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4dp"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_fame"
+            app:layout_constraintEnd_toStartOf="@+id/img_user_ip_right"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_fame"
+            app:layout_constraintTop_toTopOf="@+id/tv_fame" />
+
+        <ImageView
+            android:id="@+id/img_user_ip_right"
+            android:layout_width="@dimen/_16dp"
+            android:layout_height="@dimen/_16dp"
+            android:layout_margin="@dimen/_4dp"
+            android:contentDescription="@string/desc_ip_image"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_user_ip_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_user_ip_right"
+            app:layout_constraintTop_toTopOf="@+id/tv_user_ip_right"
+            app:srcCompat="@drawable/ic_ip_address" />
+
+        <!--Time,Vs,Loot-->
+        <ImageView
+            android:id="@+id/img_time"
+            android:layout_width="@dimen/_16dp"
+            android:layout_height="@dimen/_16dp"
+            android:layout_margin="@dimen/_4dp"
+            android:contentDescription="@string/desc_time_image"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_time"
+            app:layout_constraintEnd_toStartOf="@+id/tv_time"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_time"
+            app:srcCompat="@drawable/ic_clock" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            time="@{pvpData.time}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_vsL"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/img_time"
+            app:layout_constraintTop_toBottomOf="@+id/tv_user_ip_left" />
+
+
+        <TextView
+            android:id="@+id/tv_vsL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/used_in_verses"
+            android:textDirection="rtl"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_time"
+            app:layout_constraintEnd_toStartOf="@+id/img_vs"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_time"
+            app:layout_constraintTop_toTopOf="@+id/tv_time" />
+
+        <ImageView
+            android:id="@+id/img_vs"
+            android:layout_width="@dimen/_16dp"
+            android:layout_height="@dimen/_16dp"
+            android:layout_margin="@dimen/_4dp"
+            android:contentDescription="@string/desc_versus_image"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_vsL"
+            app:layout_constraintEnd_toStartOf="@+id/tv_vsR"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_vsL"
+            app:layout_constraintTop_toTopOf="@+id/tv_vsL"
+            app:srcCompat="@drawable/player_versus_player" />
+
+        <TextView
+            android:id="@+id/tv_vsR"
+            versus="@{pvpData}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4dp"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@+id/img_vs"
+            app:layout_constraintEnd_toStartOf="@+id/img_loot"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/img_vs"
+            app:layout_constraintTop_toTopOf="@+id/img_vs" />
+
+        <TextView
+            android:id="@+id/tv_loot"
+            loot="@{pvpData.victimData.loot}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4dp"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_vsR"
+            app:layout_constraintEnd_toStartOf="@id/img_loot"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_vsR"
+            app:layout_constraintTop_toTopOf="@+id/tv_vsR" />
+
+        <ImageView
+            android:id="@+id/img_loot"
+            android:layout_width="@dimen/_16dp"
+            android:layout_height="@dimen/_16dp"
+            android:layout_margin="@dimen/_4dp"
+            android:contentDescription="@string/desc_loot_count_image"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_loot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_loot"
+            app:layout_constraintTop_toTopOf="@+id/tv_loot"
+            app:srcCompat="@drawable/loot" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

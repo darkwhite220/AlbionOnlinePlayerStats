@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="range_slider_array">
+        <item>0.0</item>
+        <item>100.0</item>
+    </array>
+
+    <!-- Reply Preference -->
+    <string-array name="theme_entries">
+        <item>@string/follow_device_theme</item>
+        <item>@string/dark_theme</item>
+        <item>@string/light_theme</item>
+    </string-array>
+
+    <string-array name="theme_values">
+        <item>follow_device_theme</item>
+        <item>dark_theme</item>
+        <item>light_theme</item>
+    </string-array>
+</resources>

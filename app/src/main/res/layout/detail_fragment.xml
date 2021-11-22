@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="earth.darkwhite.albiononlineplayerstats.detail.DetailViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:transitionName="@string/detail_fragment_transition_name"
+            tools:context=".detail.DetailFragment">
+
+            <!--Players-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardView_players"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <include
+                    android:id="@+id/included_min_data_in_detail_frag"
+                    layout="@layout/item_min_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_8dp"
+                    app:pvpData="@{viewModel.data}" />
+            </com.google.android.material.card.MaterialCardView>
+            <!--Equipment-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardView_equipment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView_players">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:padding="@dimen/_8dp"
+                        android:text="@string/equipment"
+                        app:layout_constraintEnd_toEndOf="@+id/cardView_loot"
+                        app:layout_constraintStart_toStartOf="@+id/cardView_loot"
+                        app:layout_constraintTop_toTopOf="@+id/cardView_loot" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <include
+                                android:id="@+id/include_detail_fragL"
+                                layout="@layout/item_equipment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:equipment="@{viewModel.data.victimData.Equipment}" />
+
+                            <TextView
+                                android:id="@+id/equipment_separator"
+                                android:layout_width="@dimen/_1dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_2dp"
+                                android:layout_marginTop="@dimen/_24dp"
+                                android:layout_marginEnd="@dimen/_2dp"
+                                android:layout_marginBottom="@dimen/_24dp"
+                                android:background="?attr/colorControlNormal" />
+
+                            <include
+                                android:id="@+id/include_detail_fragR"
+                                layout="@layout/item_equipment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:equipment="@{viewModel.data.killerData.Equipment}" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </com.google.android.material.card.MaterialCardView>
+            <!--Loot-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardView_loot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView_equipment">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_loot_title"
+                        lootTitle="@{viewModel.data.victimData.name}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:padding="@dimen/_8dp"
+                        app:layout_constraintEnd_toEndOf="@+id/cardView_loot"
+                        app:layout_constraintStart_toStartOf="@+id/cardView_loot"
+                        app:layout_constraintTop_toTopOf="@+id/cardView_loot" />
+
+                    <TextView
+                        android:id="@+id/tv_loot_empty"
+                        lootEmpty="@{viewModel.data.victimData.loot}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:padding="@dimen/_8dp"
+                        android:text="@string/empty"
+                        app:layout_constraintEnd_toEndOf="@+id/cardView_loot"
+                        app:layout_constraintStart_toStartOf="@+id/cardView_loot"
+                        app:layout_constraintTop_toTopOf="@+id/cardView_loot" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView_loot"
+                        listDataEquipment="@{viewModel.data.victimData.loot}"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="@dimen/_12dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="@dimen/_8dp"
+                        android:paddingBottom="@dimen/_8dp"
+                        tools:listitem="@layout/item_loot" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

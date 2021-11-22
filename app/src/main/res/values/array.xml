@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="fame_slider_default">
+        <item>0</item>
+        <item>100</item>
+    </array>
+</resources>

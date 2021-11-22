@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_filter"
+        android:icon="@drawable/ic_tune_24"
+        android:title="@string/filter"
+        app:showAsAction="ifRoom" />
+
+    <group>
+        <item
+            android:id="@+id/menu_reload"
+            android:icon="@drawable/ic_refresh"
+            android:title="@string/reload"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/settingsFragment"
+            android:icon="@drawable/ic_settings_24"
+            android:title="@string/settings"
+            app:showAsAction="never" />
+    </group>
+
+</menu>

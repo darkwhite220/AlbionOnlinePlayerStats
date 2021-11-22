@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="playerData"
+            type="earth.darkwhite.albiononlineplayerstats.data.api.model.PlayerData" />
+
+        <variable
+            name="clickListener"
+            type="earth.darkwhite.albiononlineplayerstats.addplayer.AddPlayerAdapter.AddPlayerListener" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_4dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/_4dp"
+        android:checkable="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="@{(view) -> clickListener.onAddPlayer(view, playerData)}">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_4dp">
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4dp"
+                android:text="@{playerData.name}"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_alliance"
+                android:layout_width="@dimen/_16dp"
+                android:layout_height="@dimen/_16dp"
+                android:layout_margin="@dimen/_4dp"
+                android:contentDescription="@string/desc_alliance_image"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_guild_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_guild_name"
+                app:srcCompat="@drawable/ic_shield__1_" />
+
+            <TextView
+                android:id="@+id/tv_guild_name"
+                guildAlliance="@{playerData}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_alliance"
+                app:layout_constraintTop_toBottomOf="@+id/tv_username" />
+
+            <ImageView
+                android:id="@+id/img_death_fame"
+                android:layout_width="@dimen/_16dp"
+                android:layout_height="@dimen/_16dp"
+                android:layout_margin="@dimen/_4dp"
+                android:contentDescription="@string/image_representing_player_death_fame"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_death_fame"
+                app:layout_constraintEnd_toStartOf="@+id/tv_death_fame"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_death_fame"
+                app:srcCompat="@drawable/ic_skull" />
+
+            <TextView
+                android:id="@+id/tv_death_fame"
+                fame="@{playerData.deathFame}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/img_kd_ratio"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/img_death_fame"
+                app:layout_constraintTop_toBottomOf="@+id/tv_guild_name"
+                tools:text="Death fame" />
+
+            <ImageView
+                android:id="@+id/img_kd_ratio"
+                android:layout_width="@dimen/_16dp"
+                android:layout_height="@dimen/_16dp"
+                android:layout_margin="@dimen/_4dp"
+                android:contentDescription="@string/image_representing_player_kill_death_fame_ratio"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_death_fame"
+                app:layout_constraintEnd_toStartOf="@+id/tv_kill_death_fame_ratio"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tv_death_fame"
+                app:layout_constraintTop_toTopOf="@+id/tv_death_fame"
+                app:srcCompat="@drawable/ratio" />
+
+            <TextView
+                android:id="@+id/tv_kill_death_fame_ratio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4dp"
+                android:text="@{String.valueOf(playerData.fameRatio)}"
+                app:layout_constraintEnd_toStartOf="@+id/tv_kill_fame"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/img_kd_ratio"
+                app:layout_constraintTop_toBottomOf="@+id/tv_guild_name"
+                tools:text="KD fame ratio" />
+
+            <TextView
+                android:id="@+id/tv_kill_fame"
+                fame="@{playerData.killFame}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4dp"
+                android:gravity="end"
+                app:layout_constraintEnd_toStartOf="@+id/img_kill_fame"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tv_kill_death_fame_ratio"
+                app:layout_constraintTop_toBottomOf="@+id/tv_guild_name"
+                tools:text="Kill fame" />
+
+            <ImageView
+                android:id="@+id/img_kill_fame"
+                android:layout_width="@dimen/_16dp"
+                android:layout_height="@dimen/_16dp"
+                android:layout_margin="4dp"
+                android:contentDescription="@string/image_representing_player_kill_fame"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_kill_fame"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tv_kill_fame"
+                app:layout_constraintTop_toTopOf="@+id/tv_kill_fame"
+                app:srcCompat="@drawable/ic_sword" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

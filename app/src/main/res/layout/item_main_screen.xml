@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="pvpData"
+            type="earth.darkwhite.albiononlineplayerstats.data.api.model.ReportsResponse" />
+
+        <variable
+            name="listener"
+            type="earth.darkwhite.albiononlineplayerstats.mainscreen.MainScreenAdapter.MainScreenAdapterListener" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_4dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/_4dp"
+        android:onClick="@{(view) -> listener.onPvpDataClick(view, pvpData)}"
+        android:transitionName="@{pvpData.time}">
+
+        <include
+            android:id="@+id/include_min_data_in_main_screen_item"
+            layout="@layout/item_min_data"
+            app:pvpData="@{pvpData}" />
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>
