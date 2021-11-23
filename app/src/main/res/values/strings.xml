@@ -57,6 +57,7 @@
     <string name="player_already_in_track_list">Player already exist in tracking list</string>
     <string name="report_detail">Report Detail</string>
     <string name="add_player">Add Player</string>
+    <string name="player_deleted">Player \"%1$s\" deleted from tracking list</string>
 
     <!-- Preference Titles -->
     <string name="app">App</string>

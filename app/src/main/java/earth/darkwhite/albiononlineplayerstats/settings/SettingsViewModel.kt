@@ -38,6 +38,7 @@ class SettingsViewModel @Inject constructor(
         viewModelScope.launch {
             dataSource.clearAllPlayers()
             dataSource.clearAllReports()
+            preferencesManager.updateRangeSliderValue(listOf(0F, 100F))
         }
     }
 

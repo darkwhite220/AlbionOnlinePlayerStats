@@ -11,13 +11,16 @@ import androidx.core.view.doOnPreDraw
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.chip.Chip
+import com.google.android.material.slider.RangeSlider
 import com.google.android.material.transition.MaterialElevationScale
 import dagger.hilt.android.AndroidEntryPoint
 import earth.darkwhite.albiononlineplayerstats.*
@@ -27,6 +30,7 @@ import earth.darkwhite.albiononlineplayerstats.databinding.MainScreenFragmentBin
 import earth.darkwhite.albiononlineplayerstats.mainscreen.DropDownAdapter.DropDownClickListener
 import earth.darkwhite.albiononlineplayerstats.mainscreen.MainScreenAdapter.MainScreenAdapterListener
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.flow.collect
 import java.text.NumberFormat
 import kotlin.math.roundToInt
 
@@ -142,7 +146,7 @@ class MainScreenFragment : Fragment(), MainScreenAdapterListener, DropDownClickL
         binding.includeDropDown.sliderFameRange.apply {
             setLabelFormatter { NumberFormat.getInstance().format(it.roundToInt()).toString() }
             addOnSliderTouchListener(onSliderTouchListener(viewModelMainScreen))
-            onStartSetRangeSliderValues(this@MainScreenFragment, viewModelMainScreen)
+            onStartSetRangeSliderValues(viewLifecycleOwner, viewModelMainScreen)
         }
     }
 
@@ -153,7 +157,7 @@ class MainScreenFragment : Fragment(), MainScreenAdapterListener, DropDownClickL
     }
 
     private val observeForeverTrackedUsersData = Observer<List<Float>?> {
-        Log.d(TAG, "fameRangeSliderValues: ")
+        Log.d(TAG, "observeForeverTrackedUsersData: ")
     }
 
     private fun navigateToAddPlayerFrag() {
@@ -196,7 +200,7 @@ class MainScreenFragment : Fragment(), MainScreenAdapterListener, DropDownClickL
     override fun onDeleteClick(frameLayout: View, player: Player) {
         Log.d(TAG, "onDeleteClick: ${player.name}")
         viewModelMainScreen.deletePlayerAndHisReports(playerName = player.name)
-        displaySnackBar(binding.root, "Player \"${player.name}\" deleted from tracking list")
+        displaySnackBar(binding.root, getString(R.string.player_deleted, player.name))
     }
 
     /**

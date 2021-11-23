@@ -159,10 +159,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/desc_range_slider_for_fame_points"
-                    android:stepSize="10.0"
                     android:visibility="gone"
-                    app:labelBehavior="floating"
-                    app:values="@array/range_slider_array" />
+                    app:labelBehavior="floating" />
 
                 <TextView
                     android:layout_width="match_parent"

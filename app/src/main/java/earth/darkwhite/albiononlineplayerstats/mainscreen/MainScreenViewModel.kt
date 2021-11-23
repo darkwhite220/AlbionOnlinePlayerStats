@@ -82,7 +82,7 @@ class MainScreenViewModel @Inject constructor(
     }
 
     // Return LiveData list from database of tracked players data
-    private var trackedUsersData: LiveData<List<ReportContainer>> = repo.trackedUsersData
+    private val trackedUsersData: LiveData<List<ReportContainer>> = repo.trackedUsersData
 
     // Get min/max fame values
     val fameRangeSliderValues: LiveData<MutableList<Float>?> = Transformations.map(trackedUsersData) {

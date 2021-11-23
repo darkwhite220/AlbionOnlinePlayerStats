@@ -112,13 +112,13 @@ fun DropDownLayoutBinding.onStartSetFilterChipCheck(viewLifecycleOwner: Lifecycl
     }
 }
 
+
 // Listen & Update RangeSlider
 @ExperimentalCoroutinesApi
-fun RangeSlider.onStartSetRangeSliderValues(fragment: MainScreenFragment, viewModel: MainScreenViewModel) {
-    Log.d(MainScreenFragment.TAG, "onStartRangeSliderValues: ")
-    fragment.activity?.lifecycleScope?.launch {
+fun RangeSlider.onStartSetRangeSliderValues(viewLifecycleOwner: LifecycleOwner, viewModel: MainScreenViewModel) {
+    viewLifecycleOwner.lifecycleScope.launchWhenCreated {
         viewModel.filterPreferences.collect { preferences ->
-            Log.d(MainScreenFragment.TAG, "onStartSetRangeSliderValues: change")
+            Log.d(MainScreenFragment.TAG, "onStartSetRangeSliderValues:")
             preferences.form.let { valueFrom = it }
             preferences.to.let { valueTo = it }
             values = mutableListOf(preferences.minStep, preferences.maxStep)
@@ -126,6 +126,7 @@ fun RangeSlider.onStartSetRangeSliderValues(fragment: MainScreenFragment, viewMo
         }
     }
 }
+
 
 /**
  * Animate DropDown layout Down/Up

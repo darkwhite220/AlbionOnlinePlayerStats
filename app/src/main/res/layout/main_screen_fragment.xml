@@ -124,7 +124,7 @@
                 android:layout_margin="@dimen/_8dp"
                 android:text="@string/add_new_player"
                 android:textStyle="bold"
-                android:visibility="@{viewModel.reportsCountBool? View.VISIBLE : View.GONE}"
+                android:visibility="@{viewModel.playersCount? View.VISIBLE : View.GONE}"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView2"
                 app:layout_constraintEnd_toStartOf="@+id/imageView2"
                 app:layout_constraintTop_toTopOf="@+id/imageView2" />
@@ -137,7 +137,7 @@
                 android:layout_marginEnd="88dp"
                 android:layout_marginBottom="29dp"
                 android:contentDescription="@string/desc_direction_image"
-                android:visibility="@{viewModel.reportsCountBool? View.VISIBLE : View.GONE}"
+                android:visibility="@{viewModel.playersCount? View.VISIBLE : View.GONE}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:srcCompat="@drawable/ic_arrow_24" />
