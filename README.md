@@ -11,6 +11,12 @@ Albion Online Player Stats is a companion app for the game [Albion Online](https
 
 *If you don't play the game try fetching these IGNs (lewpac, stabber, fakturka, imshe)*
 
+
+
+https://user-images.githubusercontent.com/53045980/143072265-49d2f88e-de1e-4da5-814e-f1ed94b95cb8.mp4
+
+
+
 <img src="https://imgur.com/cPPL2hz.png" height="400px"/>
 <img src="https://imgur.com/CCfoaQz.png" height="400px"/>
 
