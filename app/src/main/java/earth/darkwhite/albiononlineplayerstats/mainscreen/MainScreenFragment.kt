@@ -295,6 +295,7 @@ class MainScreenFragment : Fragment(), MainScreenAdapterListener, DropDownClickL
     override fun onStop() {
         super.onStop()
         Log.d(TAG, "onStop: ")
+        backdropShown = false // reset
         adapterMainList.unregisterAdapterDataObserver(adapterMainListObserver)
     }
 
