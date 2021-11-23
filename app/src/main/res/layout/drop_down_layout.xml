@@ -152,8 +152,6 @@
                         android:text="@string/fame" />
                 </com.google.android.material.chip.ChipGroup>
 
-                <!--                rangeValues="@{viewModel.fameRangeSliderValues}"-->
-                <!--                rangeValues="@{viewModel.rangeSliderValues}"-->
                 <com.google.android.material.slider.RangeSlider
                     android:id="@+id/slider_fame_range"
                     android:layout_width="match_parent"

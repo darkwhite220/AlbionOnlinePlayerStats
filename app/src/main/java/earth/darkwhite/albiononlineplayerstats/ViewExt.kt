@@ -112,7 +112,6 @@ fun DropDownLayoutBinding.onStartSetFilterChipCheck(viewLifecycleOwner: Lifecycl
     }
 }
 
-
 // Listen & Update RangeSlider
 @ExperimentalCoroutinesApi
 fun RangeSlider.onStartSetRangeSliderValues(viewLifecycleOwner: LifecycleOwner, viewModel: MainScreenViewModel) {
@@ -126,7 +125,6 @@ fun RangeSlider.onStartSetRangeSliderValues(viewLifecycleOwner: LifecycleOwner, 
         }
     }
 }
-
 
 /**
  * Animate DropDown layout Down/Up
