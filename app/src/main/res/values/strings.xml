@@ -75,6 +75,8 @@
     <string name="send_crash_reports_desc">Help improve App usability by sending crash reports</string>
     <string name="delete_user_data">Delete user data</string>
     <string name="delete_used_data_desc">Delete all tracked players data from this device</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="privacy_policy_url">https://pages.flycricket.io/albion-online-player/privacy.html</string>
 
     <!-- About Preferences -->
     <string name="data_source">Data source</string>
